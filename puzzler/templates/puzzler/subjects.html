@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subject Choice</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+<body>
+    <span style="float:right"><a href = "{% url 'logout' %}"><button class="button is-info is-rounded"><span class="icon-text"><span class="icon"><i class="fas fa-sign-out-alt"></i></span><span>Logout</span></span></button></a></span>
+    <section class="section">
+        <h1 class="title is-1">Welcome to Puzzler!</h1>
+        <div class="columns">
+            <div class="column">
+                <ul>
+                {% for subject in subject_list %}
+                    <li class="subtitle is-3"><a href="subject/{{subject}}"> <button class="button is-link is-large">{{subject}}</button> </a> </li>
+                {% endfor %}
+                
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

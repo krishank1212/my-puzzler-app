@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{question.question_text}}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+<body>
+    <span style="float:right"><a href = "{% url 'logout' %}"><button class="button is-info is-rounded"><span class="icon-text"><span class="icon"><i class="fas fa-sign-out-alt"></i></span><span>Logout</span></span> </button></a> <a href ="{% url 'subjects' %}"> <button class="button is-info is-rounded"><span class="icon-text"><span class="icon"><i class="fas fa-book-open"></i></span><span>Subjects</span></span> </button></a><a href="/puzzler/subject/{{subject_name}}"><button class="button is-info is-rounded"><span class="icon-text"><span class="icon"><i class="fas fa-question"></i></span><span>Questions</span></span> </button></a><a href="/puzzler/user/{{user_id}}"><button class="button is-info is-rounded"><span class="icon-text"><span class="icon"><i class="fas fa-user"></i></span><span>Your Profile</span></span> </button></a></span>     
+    <section class="section">
+        <div class="title">
+        <h1 class="title is-1">{{question.question_text}} </h1>
+        <h3 class="subtitle is-3">Written By: <a href="{% url 'user_page' question.user.id %}" class="has-text-link">{{question.user}}</a></h3>
+        </div>
+        {% if empty %}   
+            {% if request.user in question.user_answers.all or request.user == question.user %}
+                {% for a in question.answer_set.all %}
+                    <p class="subtitle">Answer: {{a.answer}} Solution: {{a.solution}} Written By: <a href="{% url 'user_page' a.user.id %}" class="has-text-link">{{a.user}}</a>  
+                        {% if a.correct %} 
+                            Accuracy: Correct!
+                        {% else %}
+                        Accuracy: Wrong!</p>
+                        {% endif %}
+                {% endfor %}
+            {% else %}
+                <p class="subtitle"> Nice try! Answer the question before you can see other answers!</p>
+            {% endif %}
+        {% else %}
+            <p class="subtitle">This question has not been answered</p> 
+        {% endif %}
+        <form action="/puzzler/subject/{{subject_name}}/{{question.id}}/answer" method="post" class="box">
+            {% csrf_token %}
+            {{form}}
+            {% if question.user.username == request.user.username or request.user in question.user_answers.all %}
+                <div class="control">
+                    <input type="submit" value="Send!" class="button is-primary " disabled>
+            {% else %}
+                    <input type="submit" value="Send!" class="button is-primary " >       
+                </div>
+            {% endif %}
+
+            
+            
+      </form>  
+    </section>
+
+    
+</body>
+</html>
+
+
+

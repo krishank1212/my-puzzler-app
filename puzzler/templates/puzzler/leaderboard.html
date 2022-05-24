@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <title>Leaderboard</title>
+</head>
+<body>
+    <section class="section">
+        <h1 class="title is-1">Leaderboard</h1>
+        <h3 class="subtitle is-3">View how you fare across other users!</h3>
+        <ol>
+            {% for user in users %}
+                <li class="box"><a href="{% url 'user_page' user.user.id %}">{{user.user.username}}</a>------------{{user.score}} points </li>
+            {% endfor %}
+        </ol>
+    </section>
+</body>
+</html>

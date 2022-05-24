@@ -1,0 +1,24 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+<body>
+    <h1 class="title"> Welcome back to Puzzler!</h1>
+    <form class = "box" action = "" method = "POST">
+        {% csrf_token %}
+        {{form}}
+        <button class="button is-primary">
+            <span class="icon">
+                <i class="fas fa-sign-in-alt"></i>
+            </span>
+            <input class="button is-primary" type="submit" value="Log in!">
+        </button>
+    </form>
+    <p class="subtitle">New to Puzzler? <a href = 'signup'><button class="button is-link"><span class="icon-with-text"><span class="icon"><i class="fas fa-clipboard "></i></span><span>Signup Here!</span></span> </button> </a></p>
+</body>
+</html>

@@ -1,0 +1,224 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <title>Signup</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+<body>
+    <section class="section">
+        <h1 class="title"> Welcome to Puzzler!</h1>
+        <form type = "" action = "{% url 'signup' %}" method = "post" class="box">
+            {% csrf_token %}
+            {% if err_mesg is not empty %}
+                <div class="field">
+                    <label class="label">Username</label>
+                    <div class="control has-icons-left has-icons-right">
+                    
+                    {% if err_mesg == 'username' %}
+                        <input name="username" class="input is-danger" type="text" placeholder="Username123" >
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-user"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                            <i class="fas fa-times"></i>
+                        </span>
+                        </div>
+                        
+                    
+                        <p class="help is-danger">This username is unavailable</p>
+
+                        <div class="field">
+                            <label class="label">Password</label>
+                            <div class="control has-icons-left has-icons-right">
+                                <input class="input" type="password" name="password1" placeholder="" >
+                                <span class="icon is-small is-left">
+                                <i class="fas fa-lock"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Confirm Password</label>
+                            <div class="control has-icons-left has-icons-right">
+                              <input class="input" type="password" name="password2" placeholder="" >
+                              <span class="icon is-small is-left">
+                                <i class="fas fa-lock"></i>
+                              </span>
+                            </div>
+                            <p class="help">Re-enter the same password. must be at least 8 characters and must have at least one number, uppercase and lowercase letter</p>
+                          </div>
+                    {% else %}
+                        <input name="username" class="input is-success" type="text" placeholder="Username123" >
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-user"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                            <i class="fas fa-check"></i>
+                        </span>
+                        </div>
+                    
+                        <p class="help is-success">This username is available</p>
+                        </div>
+                    {% endif %}
+                    <div class="field">
+                        <label class="label">Password</label>
+                        <div class="control has-icons-left has-icons-right">
+                        {% if err_mesg == 'pswd' %}
+                            <input name="password1" class="input is-danger" type="password" >
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                            <span class="icon is-small is-right">
+                                <i class="fas fa-times"></i>
+                            </span>
+                            </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">Confirm Password</label>
+                                <div class="control has-icons-left has-icons-right">
+                                <input name="password2" class="input is-danger" type="password"  >
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                                <span class="icon is-small is-right">
+                                    <i class="fas fa-times"></i>
+                                </span>
+                                </div>
+                        
+                                <p class="help is-danger">Passwords do not match</p>
+                            </div>
+                        {% elif err_mesg == 'short' %}
+                            <input name="password1" class="input is-danger" type="password" >
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                            <span class="icon is-small is-right">
+                                <i class="fas fa-times"></i>
+                            </span>
+                            </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">Confirm Password</label>
+                                <div class="control has-icons-left has-icons-right">
+                                <input name="password2" class="input is-danger" type="password"  >
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                                <span class="icon is-small is-right">
+                                    <i class="fas fa-times"></i>
+                                </span>
+                                </div>
+                        
+                                <p class="help is-danger">Password must be more than 8 characters</p>
+                            </div>
+                        {% elif err_mesg == 'lower' %}
+                            <input name="password1" class="input is-danger" type="password" >
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                            <span class="icon is-small is-right">
+                                <i class="fas fa-times"></i>
+                            </span>
+                            </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">Confirm Password</label>
+                                <div class="control has-icons-left has-icons-right">
+                                <input name="password2" class="input is-danger" type="password"  >
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                                <span class="icon is-small is-right">
+                                    <i class="fas fa-times"></i>
+                                </span>
+                                </div>
+                        
+                                <p class="help is-danger"> Password must have at least 1 lowercase letter</p>
+                            </div>
+                        {% elif err_mesg == 'upper' %}
+                            <input name="password1" class="input is-danger" type="password" >
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-user"></i>
+                            </span>
+                            <span class="icon is-small is-right">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                            </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">Confirm Password</label>
+                                <div class="control has-icons-left has-icons-right">
+                                <input name="password2" class="input is-danger" type="password"  >
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                                <span class="icon is-small is-right">
+                                    <i class="fas fa-times"></i>
+                                </span>
+                                </div>
+                        
+                                <p class="help is-danger">Password must have at least 1 uppercase letter</p>
+                            </div>
+                        {% elif err_mesg == 'num' %}
+                            <input name="password1" class="input is-danger" type="password" >
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                            <span class="icon is-small is-right">
+                                <i class="fas fa-times"></i>
+                            </span>
+                            </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">Confirm Password</label>
+                                <div class="control has-icons-left has-icons-right">
+                                <input name="password2" class="input is-danger" type="password"  >
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                                <span class="icon is-small is-right">
+                                    <i class="fas fa-times"></i>
+                                </span>
+                                </div>
+                        
+                                <p class="help is-danger">Password must have at least 1 number</p>
+                            </div>
+                        {% endif %}
+            {% else %}
+                <div class="field">
+                    <label class="label">Username</label>
+                    <div class="control has-icons-left has-icons-right">
+                    <input class="input" type="text" name="username"  placeholder="Username123" >
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-user"></i>
+                    </span>
+                </div>
+                </div>
+                <div class="field">
+                    <label class="label">Password</label>
+                    <div class="control has-icons-left has-icons-right">
+                        <input class="input" type="password" name="password1" placeholder="" >
+                        <span class="icon is-small is-left">
+                        <i class="fas fa-lock"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Confirm Password</label>
+                    <div class="control has-icons-left has-icons-right">
+                      <input class="input" type="password" name="password2" placeholder="" >
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-lock"></i>
+                      </span>
+                    </div>
+                    <p class="help">Re-enter the same password. must be at least 8 characters and must have at least one number, uppercase and lowercase letter</p>
+                  </div>
+            {% endif %}
+            <input type="submit" value="Signup!" class="button is-primary">
+        </form>
+        <p class="subtitle">Already have an account? <a href="login"><button class="button is-link">Login</button> </a></p>
+    </section>
+</body>
+</html>

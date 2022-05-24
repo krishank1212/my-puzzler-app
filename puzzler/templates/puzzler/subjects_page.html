@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{subject}}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+<body>
+    <span style="float:right"><a href = "{% url 'logout' %}"><button class="button is-info is-rounded"><span class="icon-text"><span class="icon"><i class="fas fa-sign-out-alt"></i></span><span>Logout</span></span> </button></a> <a href ="{% url 'subjects' %}"> <button class="button is-info is-rounded"><span class="icon-text"><span class="icon"><i class="fas fa-book-open"></i></span><span>Subjects</span></span></button></a></span>
+    <section class="section">
+        <h1 class="title is-1">{{subject}}</h1>
+        {% if questions %}
+            <div class="columns is-multiline">
+                {% for q in questions %}
+                        <div class="column is-7">
+                            <div class="notification is-primary">
+                                <h3 class="title is-3">
+                                    <a class="has-text-link" href="{{q.id}}" >{{q.question_text}}</a> 
+                                </h3>
+                                <h3 class="subtitle is-5">Written by: {{q.user}}</h3>
+                                
+                            </div>
+                        </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>There are no questions for this subject</p>
+        {% endif %}
+        <form method="post" action="/puzzler/subject/{{subject}}/question" class="box">
+            {% csrf_token %}
+            {{form}}
+            <input type="submit" value="Send!" class="button is-primary">
+        </form>
+    </section>
+</body>

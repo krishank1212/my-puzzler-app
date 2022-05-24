@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{user.username}}</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+<body>
+    <span style="float:right"><a href = "{% url 'logout' %}"><button class="button is-info is-rounded"><span class="icon-text"><span class="icon"><i class="fas fa-right-from-bracket"></i></span><span>Logout</span></span> </button></a> <a href ="{% url 'subjects' %}"> <button class="button is-info is-rounded"><span class="icon-text"><span class="icon"><i class="fas fa-book-open"></i></span><span>Subjects</span></span> </button></a><a href="{% url 'user_page' request.user.id %}"><button class="button is-info is-rounded"><span class="icon-text"><span class="icon"><i class="fas fa-user"></i></span><span>Your Profile</span></span> </button></a></span>
+    <section class="section">
+        <h1 class="title">{{user.username}}'s Profile</h1>
+        <ul>
+           <li>Score:{{score}}</li>
+           <li>Favourite Subject (The subject which this user has asked and answered the most questions about):</li>
+           <li>Leaderboard Rank:</li> 
+        </ul>
+    </section>
+</body>
+</html>
