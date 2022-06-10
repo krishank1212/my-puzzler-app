@@ -7,7 +7,7 @@
     <title>Leaderboard</title>
 </head>
 <body>
-    <span style="float:right"><a href = "{% url 'logout' %}"><button class="button is-info is-rounded"><span class="icon-text"><span class="icon"><i class="fas fa-sign-out-alt"></i></span><span>Logout</span></span> </button></a> <a href ="{% url 'subjects' %}"> <button class="button is-info is-rounded"><span class="icon-text"><span class="icon"><i class="fas fa-book-open"></i></span><span>Subjects</span></span></button></a></span></button></a><a href="/puzzler/user/{{user_id}}"><button class="button is-info is-rounded"><span class="icon-text"><span class="icon"><i class="fas fa-user"></i></span><span>Your Profile</span></span> </button></a></span>
+    <span style="float:right"><a href = "{% url 'logout' %}"><button class="button is-info is-rounded"><span class="icon-text"><span class="icon"><i class="fas fa-sign-out-alt"></i></span><span>Logout</span></span> </button></a> <a href ="{% url 'subjects' %}"> <button class="button is-info is-rounded"><span class="icon-text"><span class="icon"><i class="fas fa-book-open"></i></span><span>Subjects</span></span></button></a></span></button></a><a href="{% url 'user_page' request.user.id %}"><button class="button is-info is-rounded"><span class="icon-text"><span class="icon"><i class="fas fa-user"></i></span><span>Your Profile</span></span> </button></a></span>
     <section class="section">
         <h1 class="title is-1">Leaderboard</h1>
         <h3 class="subtitle is-3">View how you fare across other users!</h3>
