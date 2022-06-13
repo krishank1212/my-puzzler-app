@@ -7,7 +7,64 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
 <body>
-    <span style="float:right"><a href = "{% url 'logout' %}"><button class="button is-info is-rounded"><span class="icon-text"><span class="icon"><i class="fas fa-sign-out-alt"></i></span><span>Logout</span></span> </button></a> <a href ="{% url 'subjects' %}"> <button class="button is-info is-rounded"><span class="icon-text"><span class="icon"><i class="fas fa-book-open"></i></span><span>Subjects</span></span> </button></a><a href="/puzzler/subject/{{subject_name}}"><button class="button is-info is-rounded"><span class="icon-text"><span class="icon"><i class="fas fa-question"></i></span><span>Questions</span></span> </button></a><a href="/puzzler/user/{{user_id}}"><button class="button is-info is-rounded"><span class="icon-text"><span class="icon"><i class="fas fa-user"></i></span><span>Your Profile</span></span> </button></a></span>     
+    <span style="float:right">
+        <a href = "{% url 'logout' %}">
+            <button class="button is-info is-rounded">
+                <span class="icon-text">
+                    <span class="icon">
+                        <i class="fas fa-sign-out-alt">
+
+                        </i>
+                    </span>
+                    <span>
+                        Logout
+                    </span>
+                </span> 
+            </button>
+        </a> 
+        <a href ="{% url 'subjects' %}"> 
+            <button class="button is-info is-rounded">
+                <span class="icon-text">
+                    <span class="icon">
+                        <i class="fas fa-book-open">
+
+                        </i>
+                    </span>
+                    <span>
+                        Subjects
+                    </span>
+                </span> 
+            </button>
+        </a>
+        <a href="{% url 'subjects_page' subject_name %}">
+            <button class="button is-info is-rounded">
+                <span class="icon-text">
+                    <span class="icon">
+                        <i class="fas fa-question">
+
+                        </i>
+                    </span>
+                    <span>
+                        Questions
+                    </span>
+                </span> 
+            </button>
+        </a>
+        <a href="/puzzler/user/{{user_id}}">
+            <button class="button is-info is-rounded">
+                <span class="icon-text">
+                    <span class="icon">
+                        <i class="fas fa-user">
+
+                        </i>
+                    </span>
+                    <span>
+                        Your Profile
+                    </span>
+                </span> 
+            </button>
+        </a>
+    </span>     
     <section class="section">
         <div class="title">
         <h1 class="title is-1">{{question.question_text}} </h1>
