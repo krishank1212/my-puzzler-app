@@ -123,7 +123,7 @@ def answer_view(request, subject_name, question_id):
     solution = request.POST['solution']
     form = forms.CreateAnswer({'answer':answer, 'solution':solution})
     question = Question.objects.get(id=question_id)
-    
+    question.user.UserProfile.score += 1
     if request.user == question.user:
         not form.is_valid 
     if form.is_valid:
