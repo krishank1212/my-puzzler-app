@@ -58,7 +58,7 @@
         <h3 class="subtitle is-3">View how you fare across other users!</h3>
         <ol>
             {% for user in users %}
-                <li class="box"><a href="{% url 'user_page' user.user.id %}">{{user.user.username}}</a>------------{{user.score}} points </li>
+                <li class="box"><a href="{% url 'user_page' user.user.id %}">{{user.user.username}}</a>------------    {{user.score}} points </li>
             {% endfor %}
         </ol>
     </section>
