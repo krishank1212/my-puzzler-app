@@ -175,9 +175,16 @@ def question_page(request, question_id, subject_name):
 @login_required(login_url='/puzzler/login')
 def user_page(request, user_id):
     user = User.objects.get(id=user_id)
+    users = UserProfile.objects.order_by('-score')
+    print(users)
+    i = 0
+    while users[i].user != user:
+        print(i)
+        i += 1
+    rank = i + 1
+    print(rank)
     score = UserProfile.objects.get(user=user).score
-    return render (request, 'puzzler/user_page.html', {'score' : score, 'user': user})
-
+    return render (request, 'puzzler/user_page.html', {'score' : score, 'user': user, 'rank' : rank})
 
 @login_required(login_url='/puzzler/login')
 def leaderboard(request):
