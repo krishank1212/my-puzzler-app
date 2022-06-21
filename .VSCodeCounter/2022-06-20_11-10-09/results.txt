@@ -1,0 +1,53 @@
+Date : 2022-06-20 11:10:09
+Directory : c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler
+Total : 22 files,  987 codes, 9 comments, 140 blanks, all 1136 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| HTML     |          7 |        635 |          0 |         41 |        676 |
+| Python   |         14 |        331 |          9 |         95 |        435 |
+| CSS      |          1 |         21 |          0 |          4 |         25 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                                            | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                                               |         22 |        987 |          9 |        140 |      1,136 |
+| migrations                                                                                                                                      |          6 |        104 |          5 |         32 |        141 |
+| static                                                                                                                                          |          1 |         21 |          0 |          4 |         25 |
+| static\puzzler                                                                                                                                  |          1 |         21 |          0 |          4 |         25 |
+| templates                                                                                                                                       |          7 |        635 |          0 |         41 |        676 |
+| templates\puzzler                                                                                                                               |          7 |        635 |          0 |         41 |        676 |
++-------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                                                                        | language | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\__init__.py                                           | Python   |          0 |          0 |          1 |          1 |
+| c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\admin.py                                              | Python   |          7 |          1 |          4 |         12 |
+| c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\apps.py                                               | Python   |          4 |          0 |          3 |          7 |
+| c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\forms.py                                              | Python   |         12 |          0 |          3 |         15 |
+| c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\migrations\0001_initial.py                            | Python   |         46 |          1 |          7 |         54 |
+| c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\migrations\0002_rename_answer_text_answer_solution.py | Python   |         12 |          1 |          6 |         19 |
+| c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\migrations\0003_answer_correct.py                     | Python   |         12 |          1 |          6 |         19 |
+| c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\migrations\0004_auto_20220322_1849.py                 | Python   |         20 |          1 |          6 |         27 |
+| c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\migrations\0005_alter_question_user_answers.py        | Python   |         14 |          1 |          6 |         21 |
+| c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\migrations\__init__.py                                | Python   |          0 |          0 |          1 |          1 |
+| c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\models.py                                             | Python   |         27 |          0 |         13 |         40 |
+| c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\static\puzzler\style.css                              | CSS      |         21 |          0 |          4 |         25 |
+| c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\templates\puzzler\leaderboard.html                    | HTML     |         61 |          0 |          5 |         66 |
+| c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\templates\puzzler\login.html                          | HTML     |         23 |          0 |          1 |         24 |
+| c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\templates\puzzler\question.html                       | HTML     |        111 |          0 |         14 |        125 |
+| c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\templates\puzzler\signup.html                         | HTML     |        213 |          0 |         11 |        224 |
+| c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\templates\puzzler\subjects.html                       | HTML     |         65 |          0 |          2 |         67 |
+| c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\templates\puzzler\subjects_page.html                  | HTML     |         89 |          0 |          4 |         93 |
+| c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\templates\puzzler\user_page.html                      | HTML     |         73 |          0 |          4 |         77 |
+| c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\tests.py                                              | Python   |          1 |          1 |          2 |          4 |
+| c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\urls.py                                               | Python   |         14 |          0 |          6 |         20 |
+| c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\views.py                                              | Python   |        162 |          2 |         31 |        195 |
+| Total                                                                                                                                           |          |        987 |          9 |        140 |      1,136 |
++-------------------------------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+

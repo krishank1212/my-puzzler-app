@@ -123,8 +123,9 @@ def answer_view(request, subject_name, question_id):
     solution = request.POST['solution']
     form = forms.CreateAnswer({'answer':answer, 'solution':solution})
     question = Question.objects.get(id=question_id)
-    question_user = UserProfile.objects.get(user=question.user.id)
-    question_user.score += 1
+    question_user = UserProfile.objects.get(user=question.user)
+    question_user.score += 1 
+    print('Score:', question_user.user.username, question_user.score)
     if request.user == question.user:
         not form.is_valid 
     if form.is_valid:
@@ -146,11 +147,15 @@ def answer_view(request, subject_name, question_id):
 
         instance.save()
         profile.save()
+        question_user.save()
+
         print(instance.answer)
         print(question.correct_answer.lower().strip())
          
 
     form = forms.CreateAnswer()
+    print('Score at end of function: ', question_user.score)
+
 
     return redirect('question_page', subject_name=subject_name, question_id=question_id)   
 
@@ -184,6 +189,7 @@ def user_page(request, user_id):
     rank = i + 1
     print(rank)
     score = UserProfile.objects.get(user=user).score
+    print('Score: ', score)
     return render (request, 'puzzler/user_page.html', {'score' : score, 'user': user, 'rank' : rank})
 
 @login_required(login_url='/puzzler/login')

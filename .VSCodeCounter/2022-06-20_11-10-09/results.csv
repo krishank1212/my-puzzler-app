@@ -1,0 +1,24 @@
+"filename", "language", "Python", "HTML", "CSS", "comment", "blank", "total"
+"c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\__init__.py", "Python", 0, 0, 0, 0, 1, 1
+"c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\admin.py", "Python", 7, 0, 0, 1, 4, 12
+"c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\apps.py", "Python", 4, 0, 0, 0, 3, 7
+"c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\forms.py", "Python", 12, 0, 0, 0, 3, 15
+"c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\migrations\0001_initial.py", "Python", 46, 0, 0, 1, 7, 54
+"c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\migrations\0002_rename_answer_text_answer_solution.py", "Python", 12, 0, 0, 1, 6, 19
+"c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\migrations\0003_answer_correct.py", "Python", 12, 0, 0, 1, 6, 19
+"c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\migrations\0004_auto_20220322_1849.py", "Python", 20, 0, 0, 1, 6, 27
+"c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\migrations\0005_alter_question_user_answers.py", "Python", 14, 0, 0, 1, 6, 21
+"c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\migrations\__init__.py", "Python", 0, 0, 0, 0, 1, 1
+"c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\models.py", "Python", 27, 0, 0, 0, 13, 40
+"c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\static\puzzler\style.css", "CSS", 0, 0, 21, 0, 4, 25
+"c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\templates\puzzler\leaderboard.html", "HTML", 0, 61, 0, 0, 5, 66
+"c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\templates\puzzler\login.html", "HTML", 0, 23, 0, 0, 1, 24
+"c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\templates\puzzler\question.html", "HTML", 0, 111, 0, 0, 14, 125
+"c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\templates\puzzler\signup.html", "HTML", 0, 213, 0, 0, 11, 224
+"c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\templates\puzzler\subjects.html", "HTML", 0, 65, 0, 0, 2, 67
+"c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\templates\puzzler\subjects_page.html", "HTML", 0, 89, 0, 0, 4, 93
+"c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\templates\puzzler\user_page.html", "HTML", 0, 73, 0, 0, 4, 77
+"c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\tests.py", "Python", 1, 0, 0, 1, 2, 4
+"c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\urls.py", "Python", 14, 0, 0, 0, 6, 20
+"c:\Users\rkuch\OneDrive - The Haberdashers' Aske's Boys' School\puzzle app\mysite\puzzler\views.py", "Python", 162, 0, 0, 2, 31, 195
+"Total", "-", 331, 635, 21, 9, 140, 1136
