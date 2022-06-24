@@ -8,7 +8,7 @@ from django.contrib.auth import login, logout
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from . import forms
-
+from statistics import mode
 from django.utils import timezone
 
 def signup(request):
@@ -190,7 +190,21 @@ def user_page(request, user_id):
     print(rank)
     score = UserProfile.objects.get(user=user).score
     print('Score: ', score)
-    return render (request, 'puzzler/user_page.html', {'score' : score, 'user': user, 'rank' : rank})
+    user_questions = Question.objects.filter(user=user)
+    q_subjects = []
+    for question in user_questions:
+        q_subjects.append(question.subject)
+        print(question)
+        print(question.subject)
+    print(q_subjects)
+    user_answers = Answer.objects.filter(user=user)
+    a_subjects = []
+    for answer in user_answers:
+        a_subjects.append(answer.question.subject)
+    subjects = a_subjects + q_subjects
+    fav_subj = mode(subjects)
+    print(fav_subj)
+    return render (request, 'puzzler/user_page.html', {'score' : score, 'user': user, 'rank' : rank, 'fav_subj' : fav_subj})
 
 @login_required(login_url='/puzzler/login')
 def leaderboard(request):
