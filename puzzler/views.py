@@ -202,8 +202,12 @@ def user_page(request, user_id):
     for answer in user_answers:
         a_subjects.append(answer.question.subject)
     subjects = a_subjects + q_subjects
-    fav_subj = mode(subjects)
-    print(fav_subj)
+    try:
+        fav_subj = mode(subjects)
+    except:
+        fav_subj = 'This user is idle and is yet to do anything on this AMAZING app!'
+    else:
+        print(fav_subj)
     return render (request, 'puzzler/user_page.html', {'score' : score, 'user': user, 'rank' : rank, 'fav_subj' : fav_subj})
 
 @login_required(login_url='/puzzler/login')
